@@ -18,7 +18,7 @@ pipeline{
 
         stage("Test"){
             steps{
-                echo "====++++executing Test++++===="
+                echo "==== hardeep ++++executing Test++++===="
                 sh "mvn test"
             }
             post{
@@ -26,10 +26,10 @@ pipeline{
                     junit "target/surefire-reports/*.xml"
                 }
                 success{
-                    echo "====++++Test executed successfully++++===="
+                    echo "===hardeep ++++Test executed successfully++++===="
                 }
                 failure{
-                    echo "====++++Test execution failed++++===="
+                    echo "====hardeep ++++Test execution failed++++===="
                 }
         
             }
